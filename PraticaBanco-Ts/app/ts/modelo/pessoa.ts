@@ -1,19 +1,11 @@
 class Pessoa {
 
-    private _nome: string;
+    protected _nome: string;
     private _idade: number;
     private _dataNascimento: Date;
 
     constructor(nome: string, idade: number, dataNascimento: Date){
-        if(this instanceof PessoaFisica){
-            this._nome = nome + ' - Fisica';    
-        }
-        else if(this instanceof PessoaJuridica){
-            this._nome = nome + ' - Juridica';
-        }
-        else{
-            this._nome = nome;
-        }
+        this._nome = nome;
         this._idade = idade;
         this._dataNascimento = dataNascimento;
     }
